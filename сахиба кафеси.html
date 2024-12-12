@@ -1,0 +1,319 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azis-Burg.com</title>
+    <style>
+        /* Сброс стандартных стилей */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+
+        /* Основной фон */
+        #background {
+            background: url('background1.jpg') no-repeat center center/cover;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            transition: background-image 1s ease-in-out;
+            text-align: center;
+        }
+
+        /* Основные стили (не изменяются) */
+        nav {
+            width: 100%;
+            background-color: rgba(253, 228, 8, 0.219);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgb(252, 1, 1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li {
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+        }
+
+        .intro {
+            margin-top: 90px; 
+            font-size: 1.8rem;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 80%;
+        }
+
+        .intro h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Раздел с ассортиментом */
+        .section {
+            padding: 30px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #FFD700;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .menu-item {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .menu-item h2 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #FFD700;
+        }
+
+        .menu-item p {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        /* Мобильная версия */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .intro {
+                font-size: 1.4rem;
+                max-width: 90%;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .menu-item {
+                width: 100%;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body style="background-color:  #082bf7;">
+
+<!-- Главное меню -->
+<nav>
+    <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#menu">Меню</a></li>
+        <li><a href="#contact">Контакты</a></li>
+    </ul>
+</nav>
+
+<div id="background">
+    <!-- Блок с информацией о заведении -->
+    <div class="intro" id="about">
+        <h1>Добро пожаловать в Сахиба кафиси</h1>
+        <p>Мы предлагаем лучшие блюда быстрого питания: вкусные бургеры, хрустящий картофель фри, свежие пиццы, шаурму, суши и освежающие напитки. Каждый наш продукт приготовлен с любовью и заботой о вашем вкусе. Наслаждайтесь качественной едой в любое время дня!</p>
+    </div>
+
+    <!-- Раздел с ассортиментом -->
+    <div class="section" id="menu">
+        <h2>Наше меню</h2>
+        <div class="menu">
+            <!-- Меню... -->
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\бигбургер.webp" alt="Бургер">
+                        <h2>Бургер(фри в подарок)</h2>
+                        <p>650 сом</p>
+                        <button>купить</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\чисбургер.webp" alt="Чизбургер">
+                        <h2>Чизбургер</h2>
+                        <p>170 сом</p>
+                        <button>купить</button>
+                    </div>
+                    <!-- Картофель фри -->
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\картошка.webp" alt="Картофель фри">
+                        <h2>Картофель фри</h2>
+                        <p>100 сом</p>
+                        <button>купить</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\еда.webp" alt="Картофель с топпингами">
+                        <h2>Картофель с топпингами</h2>
+                        <p>150 сом</p>
+                        <button>купить</button>
+                    </div>
+                    <!-- Пицца -->
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\пицаа.webp" alt="Пицца">
+                        <h2>Пицца с ананасами</h2>
+                        <p>300 сом</p>
+                        <button>купить</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\пица.webp" alt="Пицца">
+                        <h2>Пепперони Пицца</h2>
+                        <p>350 сом</p>
+                        <button>купить</button>
+                    </div>
+                    <!-- Напитки -->
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\кола.webp" alt="Кола">
+                        <h2>Кола</h2>
+                        <p>50 сом</p>
+                        <button>купить</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\лимонад.webp" alt="Лимонад">
+                        <h2>Лимонад</h2>
+                        <p>60 сом</p>
+                        <button>купить</button>
+                    </div>
+                    <!-- Десерты -->
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\морожни.webp" alt="Мороженое">
+                        <h2>Мороженое</h2>
+                        <p>120 сом</p>
+                        <button>купить</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\бб.webp" alt="Брауни">
+                        <h2>Брауни</h2>
+                        <p>130 сом</p>
+                        <button>купить</button>
+                    </div>
+                    <!-- Шаурма -->
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\без сира.webp" alt="Шаурма">
+                        <h2>Шаурма с курицей</h2>
+                        <p>200 сом</p>
+                        <button>купить</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="C:\Users\User\Pictures\сиром.webp" alt="Шаурма с сыром">
+                        <h2>Шаурма в сыром лаваше</h2>
+                        <p>220 сом</p>
+                        <button>купить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Раздел с контактами -->
+    <div class="section" id="contact">
+        <h2>Контакты</h2>
+        <p>Адрес: г.Бишкек у.Ахунбаева 14/88</p>
+        <p>Телефон: +996 220456760</p>
+        <p>Часы работы: ежедневно с 9:00 до 22:00</p>
+    </div>
+</div>
+<div class="section" id="map">
+    <h2>Наша локация</h2>
+    <iframe 
+        src="https://geotree.ru/?lat=42.89659&lon=74.59944&z=14&mlat=42.896749&mlon=74.5997"
+        width="100%" height="300px" frameborder="0" style="border:0;"
+        allowfullscreen="" aria-hidden="false" tabindex="0">
+    </iframe>
+</div>
+
+
+<script>
+const backgrounds = [
+    'бергеры.webp',
+    'комбо.webp',
+    'куп.webp',
+    'шлашлык.webp'
+];
+
+let currentIndex = 0; 
+
+function changeBackground() {
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+    document.getElementById('background').style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+}
+
+setInterval(changeBackground, 5000); 
+
+</script>
+
+</body>
+</html>
